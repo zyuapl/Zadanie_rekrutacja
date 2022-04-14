@@ -55,7 +55,7 @@ public class TeacherService {
     //Wyświetlanie nauczyciela po imieniu i nazwisku
     @GetMapping("/teachers/{name}-{surname}")
     public ResponseEntity getBySurname(@PathVariable("name") String name, @PathVariable("surname") String surname) {
-        Teacher getTeacher = jdbcTemplate.queryForObject("SELECT * FROM teachers WHERE name = ? AND surname = ?", BeanPropertyRowMapper.newInstance(Teacher.class), name, surname);
+        Teacher getTeacher = jdbcTemplate.queryForObject("SELECT DISTINCT name, surname, email, age, subject, teacher_indeks FROM teachers WHERE name = ? AND surname = ?", BeanPropertyRowMapper.newInstance(Teacher.class), name, surname);
         return ResponseEntity.ok(getTeacher);
     }
 
@@ -68,7 +68,7 @@ public class TeacherService {
     }
 
     //Usuwanie wybranego studenta dla wybranego nauczyciela
-    @DeleteMapping("/teachers/deletemystudent{teacher_indeks}/{student_indeks}")
+    @DeleteMapping("/teachers/deletemystudent/{teacher_indeks}/{student_indeks}")
             public ResponseEntity deleteMyStudent(@PathVariable("teacher_indeks") int teacher_indeks, @PathVariable("student_indeks") int student_indeks) {
         jdbcTemplate.update("DELETE FROM teachers WHERE student_indeks = ? AND teacher_indeks = ?", student_indeks, teacher_indeks);
         jdbcTemplate.update("DELETE FROM students WHERE indeks = ? AND teacher_indeks = ?", student_indeks, teacher_indeks);
