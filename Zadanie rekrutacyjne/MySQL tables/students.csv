@@ -1,0 +1,5 @@
+id,name,surname,email,age,course,indeks,teacher_indeks
+3,Miron,Polski,pol@po.pl,23,"Informatyka Stosowana",200001,300001
+4,Miron,Polski,pol@po.pl,23,"Informatyka Stosowana",200001,300002
+5,Kamil,Glada,glad@po.pl,24,"Informatyka Stosowana",200002,300001
+6,Kamil,Glada,glad@po.pl,24,"Informatyka Stosowana",200002,300002

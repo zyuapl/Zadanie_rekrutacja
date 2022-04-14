@@ -1,0 +1,5 @@
+id,name,surname,email,subject,age,teacher_indeks,student_indeks
+1,Marek,Gala,gala@po.pl,Informatyka,34,300001,200001
+2,Marek,Gala,gala@po.pl,Informatyka,34,300001,200002
+3,Robert,Maron,rob@po.pl,Matematyka,45,300002,200001
+4,Robert,Maron,rob@po.pl,Matematyka,45,300002,200002
