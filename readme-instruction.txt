@@ -10,3 +10,6 @@ INSTRUKCJA
 - należy importować tabele: students, teachers znajdujące się w katalogu: "Zadanie_rekrutacyjne/MySQL_tables"
 
 - w tabelach należy dodać auto inkrementacje dla kolumny "id", a także kolumny "id", "age", "teacher_indeks", "student_indeks" oznaczyć jako "Not Null"
+
+3. Klasy StudentService i TeacherService
+- klasy odpowiadają za obsługę studentów oraz nauczycieli (dodawanie, usuwanie, wyświetlanie)
